@@ -1,0 +1,42 @@
+{
+  "project_page": "https://github.com/nanliu/puppet-staging",
+  "description": "Manages file staging.",
+  "license": "Apache License Version 2.0",
+  "version": "0.2.0",
+  "checksums": {
+    "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "spec/fixtures/hiera.yaml": "324e9873e29c1970850f01b0f64c0269",
+    "spec/unit/puppet/parser/functions/scope_defaults_spec.rb": "5745b3d7c9de45408a2694e3a53b01e2",
+    "lib/puppet/parser/functions/scope_defaults.rb": "da916d46f3ff3be8359f75c93c2b5532",
+    "spec/defines/staging_file_spec.rb": "6ade05e854dfafb36c3f9a02cff61d22",
+    "spec/defines/staging_extract_spec.rb": "76bc8d4002070e4bb512152a18f6e3f4",
+    "manifests/extract.pp": "1d6d68da1644d50cd4e041420037d682",
+    "lib/puppet/parser/functions/staging_parse.rb": "2fada58ceae48d599f00cd808e3153d0",
+    "files/sample": "c668e2074cc870f9ef59b6b33ffda097",
+    "tests/scope_defaults.pp": "b620b367fc13aad2ff6f09f0c18463ba",
+    "tests/deploy.pp": "27e2deca3fd5353dc8aa37c9162b2368",
+    "README.md": "124bc973ad9266684c9e79350849be89",
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "tests/staging_parse.pp": "bec31082b383ef5bf6f81e4e82ec3b94",
+    "tests/file.pp": "8588e9c8b5e2ca430271ba2045dfb286",
+    "spec/defines/staging_deploy_spec.rb": "df4f68d71bc13bc7e64107802080e867",
+    "tests/init.pp": "d889d06d4cb307c38cba9267aaac978f",
+    "manifests/deploy.pp": "9a34860cdd7d1252a774eb68528accb0",
+    "tests/extract.pp": "46e809199d82ef79461ce9e0bb9138a2",
+    "manifests/file.pp": "92917ab1b9a3968f79d0efc92e123860",
+    "spec/unit/puppet/parser/functions/staging_parse_spec.rb": "1ff21c0b7796a2d9f95fed44f34f63b6",
+    "Modulefile": "d5d88704d5ff9c9583b6f0406d25756b",
+    "manifests/init.pp": "1ec7e0fcaabb05d592ee2dbb3b87b371",
+    "files/sample.tar.gz": "eba24f899d8b439f5c461f728563ece6"
+  },
+  "source": "git@github.com:nanliu/puppet-staging.git",
+  "types": [
+
+  ],
+  "name": "puppet-staging",
+  "dependencies": [
+
+  ],
+  "summary": "File Staging",
+  "author": "nanliu"
+}

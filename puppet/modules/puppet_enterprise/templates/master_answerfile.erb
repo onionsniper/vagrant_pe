@@ -1,0 +1,36 @@
+q_install=y
+q_puppet_cloud_install=y
+q_puppet_enterpriseconsole_auth_database_name=console_auth
+q_puppet_enterpriseconsole_auth_database_password=ednwaVhmrrO9lyny9JNJ
+q_puppet_enterpriseconsole_auth_database_user=console_auth
+q_puppet_enterpriseconsole_auth_password=tgTiN76ZQpie6kcU
+q_puppet_enterpriseconsole_auth_user_email=root@localhost.localdomain
+q_puppet_enterpriseconsole_database_install=y
+q_puppet_enterpriseconsole_database_name=console
+q_puppet_enterpriseconsole_database_password=o2hr7sq5urJesZkPCps7
+q_puppet_enterpriseconsole_database_remote=n
+q_puppet_enterpriseconsole_database_root_password=e2MGoBrDsLvf8cchBa7m
+q_puppet_enterpriseconsole_database_user=console
+q_puppet_enterpriseconsole_httpd_port=3000
+q_puppet_enterpriseconsole_install=y
+q_puppet_enterpriseconsole_inventory_hostname=<%= scope.lookupvar('puppet_enterprise::master_name') %>
+q_puppet_enterpriseconsole_inventory_port=8140
+q_puppet_enterpriseconsole_master_hostname=<%= scope.lookupvar('puppet_enterprise::master_name') %>
+q_puppet_enterpriseconsole_smtp_host=mail.somehost.somedomain.com
+q_puppet_enterpriseconsole_smtp_password=
+q_puppet_enterpriseconsole_smtp_port=25
+q_puppet_enterpriseconsole_smtp_use_tls=n
+q_puppet_enterpriseconsole_smtp_user_auth=n
+q_puppet_enterpriseconsole_smtp_username=
+q_puppet_symlinks_install=y
+q_puppetagent_certname=<%= scope.lookupvar('puppet_enterprise::master_name') %>
+q_puppetagent_install=y
+q_puppetagent_server=<%= scope.lookupvar('puppet_enterprise::master_name') %>
+q_puppetca_install=y
+q_puppetmaster_certname=<%= scope.lookupvar('puppet_enterprise::master_name') %>
+q_puppetmaster_dnsaltnames=<%= hostname %>,<%= fqdn %>,<%= scope.lookupvar('puppet_enterprise::master_name') %>,puppet
+q_puppetmaster_enterpriseconsole_hostname=localhost
+q_puppetmaster_enterpriseconsole_port=3000
+q_puppetmaster_forward_facts=n
+q_puppetmaster_install=y
+q_vendor_packages_install=y

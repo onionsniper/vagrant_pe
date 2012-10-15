@@ -1,10 +1,7 @@
-vagrant_pe
-==========
-
-Vagrant and Puppet Enterprise
-
-http://vagrantup.com/
-http://www.vagrantbox.es/
+# Using Vagrant for puppet testing
+#
+# http://vagrantup.com/
+# http://www.vagrantbox.es/
 
 ###############################################################################
 # Vagrant installation & setup

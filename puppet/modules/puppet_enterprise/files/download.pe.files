@@ -1,0 +1,10 @@
+# this file will download the current puppet enterprise bundles
+# we don't store the installers in git because (a) they change and (b)
+# they will eat up a lot of space.
+# to download the files, run this at the commandline:
+# bash download.pe.files
+
+curl -C - -o puppet-enterprise-2.5.3-ubuntu-12.04-amd64.tar.gz https://s3.amazonaws.com/pe-builds/released/2.5.3/puppet-enterprise-2.5.3-ubuntu-12.04-amd64.tar.gz 
+curl -C - -o puppet-enterprise-2.5.3-ubuntu-10.04-amd64.tar.gz https://s3.amazonaws.com/pe-builds/released/2.5.3/puppet-enterprise-2.5.3-ubuntu-10.04-amd64.tar.gz 
+curl -C - -o puppet-enterprise-2.5.3-el-6-x86_64.tar.gz https://s3.amazonaws.com/pe-builds/released/2.5.3/puppet-enterprise-2.5.3-el-6-x86_64.tar.gz 
+curl -C - -o puppet-enterprise-2.5.3-el-5-x86_64.tar.gz https://s3.amazonaws.com/pe-builds/released/2.5.3/puppet-enterprise-2.5.3-el-5-x86_64.tar.gz 

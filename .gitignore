@@ -1,0 +1,4 @@
+# ignore the .vagrant file
+.vagrant
+# ignore tar.gz files
+*.tar.gz

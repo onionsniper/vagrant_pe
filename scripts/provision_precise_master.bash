@@ -2,10 +2,6 @@
 
 # let's be verbose!
 set -x
- 
-echo precise-master > /etc/hostname
-/usr/bin/perl -i -pe 's/precise64/precise-master/g' /etc/hosts
-hostname precise-master
 
 # the vagrant user has the same UID and GID as our admin/maintenance account
 # let's update the vagrant UID & GID to avoid a conflict when puppet runs
@@ -19,8 +15,9 @@ VPUPPET=/opt/vagrant_ruby/bin/puppet
 CONFDIR=/vagrant/puppet
 MANIFEST=provision_master.pp
 
-${VPUPPET} apply --confdir=${CONFDIR} -e 'host { "lucid-node": ip => "192.168.9.11" }'
-${VPUPPET} apply --confdir=${CONFDIR} -e 'host { "precise-master": ip => "192.168.9.12", host_aliases => ["puppetmaster.vagrant","puppet.vagrant"] }'
-${VPUPPET} apply --confdir=${CONFDIR} -e 'host { "precise-node": ip => "192.168.9.10" }'
+${VPUPPET} apply --confdir=${CONFDIR} -e 'host { "precisemaster": ip => "192.168.9.9", host_aliases => ["puppetmaster.vagrant","puppet.vagrant"] }'
+${VPUPPET} apply --confdir=${CONFDIR} -e 'host { "precisenode1": ip => "192.168.10.10" }'
+${VPUPPET} apply --confdir=${CONFDIR} -e 'host { "precisenode2": ip => "192.168.10.11" }'
+${VPUPPET} apply --confdir=${CONFDIR} -e 'host { "lucidnode1": ip => "192.168.11.10" }'
 
 ${VPUPPET} apply --confdir=${CONFDIR} ${CONFDIR}/manifests/${MANIFEST}

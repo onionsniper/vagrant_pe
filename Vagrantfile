@@ -14,33 +14,45 @@ Vagrant::Config.run do |config|
   # config.vm.box_url = "http://domain.com/path/to/above.box"
   # config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
-  config.vm.define :precise_node do |precise_config|
-    precise_config.vm.box = "precise64"
-    # precise_config.vm.host_name = "precise_node"
-    # node_config.vm.forward_port 80, 8080
-    precise_config.vm.network :hostonly, "192.168.9.10"
-    precise_config.vm.provision :shell do |shell|
-      shell.path = "scripts/provision_precise_node.bash"
-    end
-  end
-  config.vm.define :lucid_node do |lucid_config|
-    lucid_config.vm.box = "lucid64"
-    # lucid_config.vm.host_name = "lucid_node"
-    # lucid_config.vm.forward_port 80, 8080
-    lucid_config.vm.network :hostonly, "192.168.9.11"
-    lucid_config.vm.provision :shell do |shell|
-      shell.path = "scripts/provision_node.bash"
-    end
-  end
   config.vm.define :precise_master do |master_config|
     master_config.vm.box = "precise64"
-    # master_config.vm.host_name = "precise_master"
+    master_config.vm.host_name = "precisemaster.example.com"
     master_config.vm.forward_port 3000, 3000
-    master_config.vm.network :hostonly, "192.168.9.12"
+    master_config.vm.network :hostonly, "192.168.9.9"
     master_config.vm.provision :shell do |shell|
       shell.path = "scripts/provision_precise_master.bash"
     end
   end
+
+  config.vm.define :precise_node1 do |precise_config|
+    precise_config.vm.box = "precise64"
+    precise_config.vm.host_name = "precise_node1.example.com"
+    # node_config.vm.forward_port 80, 8080
+    precise_config.vm.network :hostonly, "192.168.10.10"
+    precise_config.vm.provision :shell do |shell|
+      shell.path = "scripts/provision_precise_node.bash"
+    end
+  end
+  config.vm.define :precise_node2 do |precise_config|
+    precise_config.vm.box = "precise64"
+    precise_config.vm.host_name = "precise_node2.example.com"
+    # node_config.vm.forward_port 80, 8080
+    precise_config.vm.network :hostonly, "192.168.10.11"
+    precise_config.vm.provision :shell do |shell|
+      shell.path = "scripts/provision_precise_node.bash"
+    end
+  end
+
+  config.vm.define :lucid_node1 do |lucid_config|
+    lucid_config.vm.box = "lucid64"
+    lucid_config.vm.host_name = "lucid_node1.example.com"
+    # lucid_config.vm.forward_port 80, 8080
+    lucid_config.vm.network :hostonly, "192.168.11.10"
+    lucid_config.vm.provision :shell do |shell|
+      shell.path = "scripts/provision_lucid_node.bash"
+    end
+  end
+
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
 
